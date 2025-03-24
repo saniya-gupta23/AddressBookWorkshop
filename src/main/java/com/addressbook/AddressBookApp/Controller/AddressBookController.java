@@ -3,7 +3,7 @@ package com.addressbook.AddressBookApp.Controller;
 
 import com.addressbook.AddressBookApp.DTO.AddressBookDTO;
 import com.addressbook.AddressBookApp.Entity.AddressBook;
-import com.addressbook.AddressBookApp.Interfaces.IAddressBookService;
+import com.addressbook.AddressBookApp.Service.AddressBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,9 +15,7 @@ import java.util.List;
 public class AddressBookController {
 
     @Autowired
-
-    private IAddressBookService addressBookService;
-
+    private AddressBookService addressBookService;
 
     @GetMapping
     public ResponseEntity<List<AddressBook>> getAllContacts() {
